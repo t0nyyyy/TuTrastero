@@ -1,0 +1,280 @@
+/* Basic Reset & Global Styles (Copied from quote-style.css) */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Poppins', sans-serif; line-height: 1.6; color: #333; background-color: #fff; }
+html { scroll-behavior: smooth; } 
+.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+img { max-width: 100%; height: auto; display: block; }
+a { text-decoration: none; color: inherit; }
+ul { list-style: none; padding-left: 0; }
+h1, h2, h3, h4, h5, h6 { font-family: 'Oswald', sans-serif; color: #333f6a; margin-bottom: 1rem; line-height: 1.2; }
+
+.btn { display: inline-block; padding: 12px 25px; border-radius: 5px; font-weight: bold; text-transform: uppercase; transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease; border: none; cursor: pointer; font-family: 'Oswald', sans-serif; letter-spacing: 1px; }
+.btn-primary { background-color: #cf2f3f; color: #fff; }
+.btn-primary:hover { background-color: #b22234; transform: translateY(-2px); }
+.btn-secondary { background-color: #333f6a; color: #fff; }
+.btn-secondary:hover { background-color: #2a3357; }
+
+/* Header (Copied and adapted from quote-style.css / style.css) */
+header { background-color: #fff; padding: 15px 0; position: fixed; width: 100%; top: 0; left: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+.header-container { display: flex; justify-content: space-between; align-items: center; }
+.logo img { max-height: 50px; }
+
+.main-nav {
+    margin-right: auto; /* Pushes .header-right-items to the far right */
+}
+.main-nav ul { display: flex; }
+.main-nav li { 
+    margin-left: 20px; /* Consistent with other pages */
+}
+.main-nav a { 
+    font-family: 'Oswald', sans-serif; 
+    color: #333f6a; 
+    font-weight: 500; 
+    padding: 5px 0; 
+    position: relative; 
+    text-transform: uppercase; 
+    font-size: 0.92rem; /* Consistent with other pages */
+}
+.main-nav a.active, .main-nav a:hover { color: #cf2f3f; } /* Active state might not be used on legal page nav items */
+.main-nav a::after { content: ''; position: absolute; bottom: -2px; left: 0; width: 0; height: 2px; background-color: #cf2f3f; transition: width 0.3s ease; }
+.main-nav a.active::after, .main-nav a:hover::after { width: 100%; }
+
+.header-right-items {
+    display: flex;
+    align-items: center;
+    margin-left: 10px; /* Consistent with other pages */
+}
+
+/* --- START: Header Social Icons --- */
+.header-social-icons {
+    display: flex; 
+    align-items: center;
+    margin-right: 10px; 
+}
+.header-social-icons a {
+    color: #333f6a; 
+    font-size: 1.1rem; 
+    margin-left: 10px; 
+    transition: color 0.3s ease;
+}
+.header-social-icons a:first-child {
+    margin-left: 0; 
+}
+.header-social-icons a:hover {
+    color: #cf2f3f; 
+}
+/* --- END: Header Social Icons --- */
+
+/* START: Styles for Header Phone Info */
+.header-phone-info {
+    display: flex; 
+    align-items: center;
+    margin-right: 10px; 
+    font-family: 'Oswald', sans-serif;
+    color: #333f6a; 
+    font-weight: 500;
+    font-size: 0.9rem; 
+    white-space: nowrap; 
+}
+.header-phone-info .phone-icon {
+    margin-right: 6px; 
+    font-size: 1.1rem; 
+    line-height: 1; 
+}
+.header-phone-info a {
+    color: #333f6a; 
+    text-decoration: none;
+    font-weight: 500; 
+}
+.header-phone-info a:hover {
+    color: #cf2f3f; 
+}
+/* END: Styles for Header Phone Info */
+
+.header-cta { 
+    background-color: #cf2f3f; 
+    color: #fff; 
+    padding: 10px 18px; 
+    border-radius: 5px; 
+    font-weight: bold; 
+    font-family: 'Oswald', sans-serif; 
+    text-transform: uppercase; 
+    transition: background-color 0.3s ease; 
+    white-space: nowrap;
+    font-size: 0.92rem; 
+}
+.header-cta:hover { background-color: #b22234; }
+
+.mobile-menu-toggle { 
+    display: none; 
+    background: none; 
+    border: none; 
+    cursor: pointer; 
+    padding: 10px; 
+    margin-left: 10px; 
+}
+.mobile-menu-toggle span { display: block; width: 25px; height: 3px; background-color: #333f6a; margin: 5px 0; transition: all 0.3s ease; }
+
+/* Footer (Copied from quote-style.css) */
+footer { background-color: #333; color: #ccc; padding: 30px 0; text-align: center; }
+.footer-content { display: flex; flex-direction: column; align-items: center; gap: 10px; }
+.footer-legal-link {
+    margin-top: 5px;
+    font-size: 0.9rem;
+}
+.footer-legal-link a {
+    color: #bbb;
+    text-decoration: none;
+}
+.footer-legal-link a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+.social-links { /* Styles for footer social links, if you use them */
+    margin-top: 10px;
+}
+.social-links a {
+    color: #bbb;
+    margin: 0 10px;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+.social-links a:hover {
+    color: #fff;
+}
+
+/* --- Legal Page Specific Styles --- */
+
+.legal-page-main-content {
+    padding-top: 80px; /* Account for fixed header + a bit more space */
+    /* margin-top: 70px; /* This was in quote, but might be redundant if header padding is enough */
+}
+
+/* Page Header/Banner (Similar to quote-style.css) */
+.page-header {
+    background-color: #333f6a; 
+    color: #fff;
+    padding-top: 40px; 
+    padding-bottom: 40px;
+    text-align: center;
+    /* Removed margin-top from here as .legal-page-main-content handles top spacing */
+}
+.page-header h1 {
+    font-size: 2.8rem;
+    color: #fff;
+    margin-bottom: 10px;
+}
+.page-header p {
+    font-size: 1.1rem;
+    color: #f0f0f0;
+    max-width: 800px; 
+    margin: 0 auto;
+}
+
+/* Legal Content Sections Styling */
+.legal-content-section {
+    padding: 40px 0; 
+    background-color: #fff; 
+}
+
+.legal-text-container {
+    background-color: #fff; 
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.07);
+    max-width: 900px; 
+    margin: 0 auto 30px auto; /* Added bottom margin for spacing between sections */
+}
+.legal-content-section:last-child .legal-text-container {
+    margin-bottom: 0; /* No bottom margin for the last legal text container */
+}
+
+
+.legal-text-container h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #cf2f3f; 
+    display: inline-block; 
+}
+
+.legal-text-container p {
+    margin-bottom: 15px;
+    color: #444;
+    line-height: 1.7;
+}
+.legal-text-container p strong {
+    color: #333f6a; 
+}
+.legal-text-container em { 
+    color: #777;
+    display: block;
+    margin-bottom: 10px;
+    font-style: italic; /* Ensure em is italic */
+}
+.legal-text-container ul {
+    list-style: disc;
+    padding-left: 25px;
+    margin-bottom: 15px;
+}
+.legal-text-container ul li {
+    margin-bottom: 8px;
+    color: #444;
+}
+.legal-text-container a {
+    color: #cf2f3f; 
+    text-decoration: underline;
+}
+.legal-text-container a:hover {
+    text-decoration: none;
+}
+
+
+/* --- Responsive adjustments for Legal Page --- */
+@media (max-width: 992px) { 
+    .main-nav {
+        margin-right: 0; 
+    }
+    .header-right-items {
+        display: none; 
+    }
+    /* Phone info, social icons, CTA are part of header-right-items, so they are hidden */
+}
+
+
+@media (max-width: 768px) {
+    .page-header h1 { font-size: 2.2rem; }
+    .page-header p { font-size: 1rem; }
+
+    .legal-text-container h2 { font-size: 1.8rem; }
+    .legal-text-container { padding: 20px; }
+
+    .header-container { position: relative; }
+    .main-nav { 
+        display: none; 
+        position: absolute; 
+        top: 100%; 
+        left: 0; 
+        width: 100%; 
+        background-color: #fff; 
+        box-shadow: 0 5px 10px rgba(0,0,0,0.1); 
+        padding: 15px 0; 
+        margin-right: 0;
+    }
+    .main-nav.nav-active { display: block; }
+    .main-nav ul { flex-direction: column; align-items: center; }
+    .main-nav li { margin: 10px 0; margin-left: 0; }
+    .main-nav a { font-size: 1.1rem; }
+    .mobile-menu-toggle { display: block; }
+    /* .header-cta, .header-phone-info, .header-social-icons hidden via .header-right-items */
+
+    .legal-page-main-content { padding-top: 60px; } /* Reduced padding for mobile if header is shorter */
+    .page-header { padding-top: 30px; padding-bottom: 30px;}
+}
+
+@media (max-width: 480px) {
+    .page-header h1 { font-size: 1.8rem; }
+    .page-header p { font-size: 0.9rem; }
+    .legal-text-container h2 { font-size: 1.6rem; }
+    .btn { padding: 10px 18px; font-size: 0.9rem;}
+}

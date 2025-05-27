@@ -1,0 +1,22 @@
+# Folder to ignore
+bacukp/
+
+# Specific file to ignore (Cursor AI Workspace file)
+# Ensure the filename and casing are exact.
+PAGINA.code-workspace
+
+# Specific text file to ignore
+sitemap.txt
+
+# Common OS generated files
+.DS_Store
+Thumbs.db
+
+# Cursor AI specific folder (if it exists at the root of your project 'pagina')
+.cursor/
+
+# Other common IDE/Editor specific folders (optional, uncomment and add if you use them)
+# .vscode/
+# .idea/
+# node_modules/
+# .env
